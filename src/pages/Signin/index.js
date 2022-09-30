@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import * as C from "./styles"
+import "../../styles/styles.css"
 import Input from "../../components/Input"
 import Button from "../../components/Button"
 import { Link, useNavigate } from "react-router-dom"
@@ -30,21 +30,21 @@ const Signin = () => {
     }
 
     return(
-        <C.Container>
-            <C.Label>Sistema de Login</C.Label>
-            <C.Content>
+        <div className="container-login">
+            <label className="container-label">Sistema de Login</label>
+            <div className="container-content">
                 <Input type="email" placeholder="Digite o seu e-mail..." value={email} onChange={(e) => [setEmail(e.target.value), setError("")]} />
                 <Input type="password" placeholder="Digite a sua senha..." value={senha} onChange={(e) => [setSenha(e.target.value), setError("")]} />
-                <C.LabelError>{error}</C.LabelError>
+                <label className="login-error">{error}</label>
                 <Button Text="Entrar" onClick={handleLogin} />
-                <C.LabelSignup>
+                <label className="login-signup">
                     Ainda nao tem a sua conta?
-                    <C.Strong>
+                    <label className="login-strong">
                         <Link to="/signup">&nbsp;Registre-se</Link>
-                    </C.Strong>
-                </C.LabelSignup>
-            </C.Content>
-        </C.Container>
+                    </label>
+                </label>
+            </div>
+        </div>
     )
 }
 

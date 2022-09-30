@@ -1,0 +1,249 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    max-width: 100vw;
+    height: 100vh;
+    background-color: #121214;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* --- [ Sign in Page Login ] --- */
+
+.container-login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    height: 100vh;
+} 
+    
+.container-label {
+    font-size: 18px;
+    font-weight: 600;
+    color: #676767;
+} 
+
+.container-content {
+    gap: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    box-shadow: 0 1px 2px #0003;
+    background-color: #1a1a1d;
+    max-width: 350px;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.login-signup {
+    font-size: 16px;
+    color: #676767;
+}
+
+.login-error {
+    font-size: 14px;
+    color: red;
+}
+
+.login-strong {
+    cursor: pointer;
+}
+
+.login-strong a {
+    text-decoration: none;
+    color: #676767;
+    font-weight: 600;
+}
+
+/* --- [ Sign up Page Login ] --- */
+
+.container-signup {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    height: 100vh;
+}
+
+.label-signup {
+    font-size: 18px;
+    font-weight: 600;
+    color: #676767;
+}
+
+.content-signup {
+    gap: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    box-shadow: 0 1px 2px #0003;
+    background-color: #1a1a1d;
+    max-width: 350px;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+/* --- [ Home Page Login ] --- */
+
+.home-container {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    height: max-content;
+    gap: 20px;
+}
+
+.home-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    gap: 20px;
+}
+
+/* --- [ Sidebar Menu Style ] --- */
+
+.side-nav-container {
+    background-color: #1a1a1d;
+    width: 370px;
+    min-height: 100vh;
+    position: relative;
+    color: #676767;
+    padding: 2rem 2rem;
+    transition: 0.4s;
+}
+
+.side-nav-container-NX {
+    width: 80px;
+    transition: 0.4s;
+}
+
+.nav-title {
+    padding: 1rem 0;
+}
+
+.nav-upper, .nav-heading {
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-heading {
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.dashboard-menu {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 0;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.link-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding-left: 1rem;
+    font-size: 20px;
+    gap: 1rem;
+    height: 3rem;
+    text-decoration: none;
+    color: #676767;
+    transition: 0.4s;
+}
+
+.link-item:hover {
+    width: 100%;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 1rem;
+    background-color: #121214;
+    height: 3rem;
+    border-radius: 6px;
+    border-left: 3px solid aquamarine;
+    transition: 0.4s;
+}
+
+.menu-divider {
+    width: 100%;
+    height: 1px;
+    background-color: #676767;
+    margin-bottom: 2rem;
+}
+
+.nav-label {
+    font-size: 20px;
+    color: aquamarine;
+}
+
+.nav-logout {
+    display: flex;
+    font-size: 20px;
+    color: aquamarine;
+    align-items: center;
+    justify-content: flex-start;
+    height: 3rem;
+    width: 100%;
+    cursor: pointer;
+}
+
+.link-logout {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    padding-left: 1rem;
+    background-color: #121214;
+    height: 3rem;
+    border-radius: 6px;
+    border-left: 3px solid aquamarine;
+    text-decoration: none;
+    transition: 0.4s;
+}
+
+.side-nav-container-NX .nav-content {
+    opacity: 0;
+    transition: 0.4s;
+}
+
+.hamburger {
+    position: absolute;
+    right: 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin: auto -35px;
+    background-color: rgb(127, 255, 212);
+    border: 2px solid rgb(127, 255, 212);
+    padding: 20px;
+    border-radius: 90px;
+    height: 71px;
+    width: 74px;
+}
+
+.hamburger-icon {
+    display: block;
+    color: #1a1a1d;
+    font-size: 2rem;
+    transition: 0.4s;
+}
+

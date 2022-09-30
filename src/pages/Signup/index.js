@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import Input from "../../components/Input"
 import Button from "../../components/Button"
-import * as C from "./styles"
+import "../../styles/styles.css"
 import { Link, useNavigate } from "react-router-dom"
 import useAuth from "../../hooks/useAuth"
 
@@ -35,22 +35,22 @@ const Signup = () => {
     }
 
     return(
-        <C.Container>
-            <C.Label>Cadastre a Sua Conta</C.Label>
-            <C.Content>
+        <div className="container-signup">
+            <label className="label-signup">Cadastre a Sua Conta</label>
+            <div className="content-signup">
                 <Input type="email" placeholder="Digite o seu E-mail..." value={email} onChange={(e) => [setEmail(e.target.value), setError("")]} />
                 <Input type="email" placeholder="Confirme o seu E-mail" value={emailConf} onChange={(e) => [setEmailConf(e.target.value), setError("")]} />
                 <Input type="password" placeholder="Digite a sua senha" value={senha} onChange={(e) => [setSenha(e.target.value), setError("")]} />
-                <C.LabelError>{error}</C.LabelError>
+                <label className="login-error">{error}</label>
                 <Button Text="Inscrever-se" onClick={handleSignup} />
-                <C.LabelSignin>
+                <label className="login-signup">
                     Ja tem uma conta?
-                    <C.Strong>
+                    <label className="login-strong">
                         <Link to="/">&nbsp;Entre</Link>
-                    </C.Strong>
-                </C.LabelSignin>
-            </C.Content>
-        </C.Container>
+                    </label>
+                </label>
+            </div>
+        </div>
     )
 }
 
